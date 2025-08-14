@@ -32,7 +32,7 @@ export default function FrequentlyQz() {
   };
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 mx-auto min-h-screen">
+    <div className="p-4 sm:p-6 lg:p-8 mx-auto mb-8">
       <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-6 sm:mb-8 text-[#4F46E5] px-2">
         Frequently asked questions
       </h1>
