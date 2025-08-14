@@ -15,7 +15,6 @@ export default function Footer() {
               business results.
             </p>
           </div>
-          {/* Updated grid layout for side-by-side sections */}
           <div className="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Our Technologies</h3>
