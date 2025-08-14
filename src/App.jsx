@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import FrequentlyQz from "./components/FrequentlyQz";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Services />
         <FrequentlyQz />
+        <Footer />
       </div>
     </main>
   );
