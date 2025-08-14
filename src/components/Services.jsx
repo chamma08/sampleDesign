@@ -23,7 +23,7 @@ export default function Services() {
               methods to respond to different intents shown by your potential
               customers who interact with your business online.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
+            <button className="bg-[#F28D35] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
               LEARN MORE
             </button>
           </div>
@@ -50,7 +50,7 @@ export default function Services() {
               We provide a clear concept and strategic overview to find the most
               efficient model for your business.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600  text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
+            <button className="bg-[#F28D35] hover:bg-orange-600  text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
               LEARN MORE
             </button>
           </div>
