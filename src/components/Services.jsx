@@ -1,19 +1,51 @@
+import { motion } from "framer-motion";
+
+const fadeLeft = (delay = 0) => ({
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { delay, duration: 0.6, ease: "easeOut" },
+  },
+});
+
+const fadeRight = (delay = 0) => ({
+  hidden: { opacity: 0, x: 50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { delay, duration: 0.6, ease: "easeOut" },
+  },
+});
 
 export default function Services() {
   return (
     <div className="min-h-screen py-16 px-4">
       <div className="max-w-6xl mx-auto space-y-24">
+
         {/* Section 1 */}
         <div className="flex flex-col lg:flex-row md:flex-row items-center gap-12 lg:gap-16">
-          <div className="flex-shrink-0">
+          <motion.div
+            variants={fadeLeft(0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex-shrink-0"
+          >
             <img
               src="/s1.png"
               alt="Web & Mobile App Development"
               className="w-80 h-80 object-contain"
             />
-          </div>
+          </motion.div>
 
-          <div className="flex-1 text-center lg:text-left md:text-left">
+          <motion.div
+            variants={fadeRight(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex-1 text-center lg:text-left md:text-left"
+          >
             <h2 className="text-3xl lg:text-4xl font-bold text-[#4F46E5] mb-6">
               Web & Mobile App Development
             </h2>
@@ -23,23 +55,39 @@ export default function Services() {
               methods to respond to different intents shown by your potential
               customers who interact with your business online.
             </p>
-            <button className="bg-[#F28D35] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-[#F28D35] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer"
+            >
               LEARN MORE
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
 
         {/* Section 2 */}
         <div className="flex flex-col md:flex-row-reverse lg:flex-row-reverse items-center gap-12 lg:gap-16">
-          <div className="flex-shrink-0">
+          <motion.div
+            variants={fadeRight(0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex-shrink-0"
+          >
             <img
               src="/s2.png"
               alt="Digital Strategy Consulting"
               className="w-80 h-80 object-contain"
             />
-          </div>
+          </motion.div>
 
-          <div className="flex-1 text-center lg:text-left md:text-left">
+          <motion.div
+            variants={fadeLeft(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex-1 text-center lg:text-left md:text-left"
+          >
             <h2 className="text-3xl lg:text-4xl font-bold text-[#4F46E5] mb-6">
               Digital Strategy Consulting
             </h2>
@@ -50,11 +98,16 @@ export default function Services() {
               We provide a clear concept and strategic overview to find the most
               efficient model for your business.
             </p>
-            <button className="bg-[#F28D35] hover:bg-orange-600  text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-[#F28D35] hover:bg-orange-600  text-white font-semibold px-6 py-3 rounded transition-colors duration-200 cursor-pointer"
+            >
               LEARN MORE
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
+
       </div>
     </div>
   );
